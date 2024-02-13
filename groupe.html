@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau HTML sans cellules pour les données</title>
+</head>
+<body>
+    <h2>Ajouter des éléments au tableau</h2>
+
+    <table id="monTableau">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Âge</th>
+            </tr>
+        </thead>
+        <tbody id="tableauBody">
+            <!-- Lignes du tableau vont ici -->
+        </tbody>
+    </table>
+
+    <br>
+
+    <form id="formAjout">
+        <label for="inputID">ID:</label>
+        <input type="text" id="inputID" name="id"><br><br>
+        <label for="inputNom">Nom:</label>
+        <input type="text" id="inputNom" name="nom"><br><br>
+        <label for="inputAge">Âge:</label>
+        <input type="text" id="inputAge" name="age"><br><br>
+        <button type="button" onclick="ajouterElement()">Ajouter</button>
+    </form>
+
+    <script>
+        function ajouterElement() {
+            // Récupérer les valeurs des champs
+            var id = document.getElementById("inputID").value;
+            var nom = document.getElementById("inputNom").value;
+            var age = document.getElementById("inputAge").value;
+
+            // Construction de la nouvelle ligne
+            var newRow = '<tr><td>' + id + '</td><td>' + nom + '</td><td>' + age + '</td></tr>';
+
+            // Ajout de la nouvelle ligne au tableau
+            document.getElementById("tableauBody").innerHTML += newRow;
+
+            // Effacer les valeurs des champs après l'ajout
+            document.getElementById("inputID").value = "";
+            document.getElementById("inputNom").value = "";
+            document.getElementById("inputAge").value = "";
+        }
+
+
+
+
+
+//         function ajouter() {
+//         if (
+//     id.value == '' ||
+//     titre.value == '' ||
+//     descript.value == '' ||
+//     date.value == ''
+//   ) {
+//     alert('Remplir les champs');
+//     return;
+    // Arrête l'exécution de la fonction si les champs sont vides
+//   }
+//   var newRow = document.createElement('tr');
+//   newRow.innerHTML = '<td>' + id.value + '</td>' +
+//                      '<td>' + titre.value + '</td>' +
+//                      '<td>' + descript.value + '</td>' +
+//                      '<td>' + date.value + '</td>';
+  // Ajout de la nouvelle ligne au corps du tableau
+//   tbody.appendChild(newRow);
+
+//   id.value = '';
+//   titre.value = '';
+//   descript.value = '';
+//   date.value = '';
+// }
+// ajouter();
+
+    </script>
+</body>
+</html>

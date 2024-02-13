@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Creer un tableau entiers
+Ecrivez une fonction qui filter les nombre pairs du tbaleua
+Ecrivez une fonction qui renvoie la somme des carres des nombres impairs du tableau -->
+    <script>
+        let entiers = [12 ,10 ,30 ,42 ,16 ,8, 9, 11, 13 ,15 ,14 ]
+         let result = entiers.filter((number) => number % 2 === 0)
+        // const result = entiers.filter(function(nombre) {
+        // return    nombre %2 ===0;
+        // }  );
+     console.log (result);
+     
+let somme= 0
+for(let i=0 ;i < entiers.length; i++){
+ if(entiers[i] %2!=0){
+ somme +=(entiers[i]**2)
+}
+}
+console.log(somme);
+
+    </script>
+    
+</body
+</html>

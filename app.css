@@ -1,0 +1,10 @@
+.buton{
+    background-color: rgb(14, 166, 213);
+    padding: 10px;
+    margin: 5px;
+}
+.cloture{
+    border: 1px solid black;
+    width: 500px;
+    margin: auto;
+}
